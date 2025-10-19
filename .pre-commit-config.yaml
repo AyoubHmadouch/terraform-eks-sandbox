@@ -15,6 +15,7 @@ repos:
       - id: terraform_tflint
         args:
           - --args=--recursive
+          - --args=--disable-rule=terraform_module_pinned_source
       - id: terraform_docs
         args:
           - --hook-config=--add-to-existing-file=true
