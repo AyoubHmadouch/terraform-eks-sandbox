@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,6 +15,9 @@ env:
   TF_VERSION: "1.13.3"
 
 jobs:
+  # ===============================
+  # TERRAFORM VALIDATE & PLAN
+  # ===============================
   terraform-plan:
     name: Terraform Validate & Plan
     runs-on: ubuntu-latest
