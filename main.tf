@@ -2,7 +2,7 @@
 
 # VPC for EKS Cluster
 module "vpc" {
-  source = "git::https://github.com/AyoubHmadouch/terraform-aws-vpc.git?ref=master"
+  source = "git::https://github.com/AyoubHmadouch/terraform-aws-vpc.git?ref=v1.0.0"
 
   name                      = var.vpc_prefix
   vpc_cidr                  = var.cidr_block
@@ -20,7 +20,7 @@ module "vpc" {
 
 # EKS Cluster
 module "eks" {
-  source = "git::https://github.com/AyoubHmadouch/terraform-aws-eks.git"
+  source = "git::https://github.com/AyoubHmadouch/terraform-aws-eks.git?ref=v1.0.0"
 
   cluster_name            = var.eks_prefix
   cluster_version         = var.eks_version
